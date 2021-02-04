@@ -1,5 +1,7 @@
 # ESP32Robot
 
+`Warning ! repository under construction`
+
 This repository is dedicated to the development of a new mobile robot for Labs proposed for student in the French engineering school [INSA Lyon](www.insa-lyon.fr). In a COVID context the objective is to propose to our student automatic control lab which can be taught both in class and remotely in the event of confinement. The constraint is to be able to illustrate the basic automatic control principles on a simple system, without the need for software requiring a significant computing capacity.  During the lab, Matlab/Simulink:registered:  can be used to do the corrector synthesis, but the students can access it remotely using a VPN.
 
 Given the specifications, our choice is directed to an ESP32 controller. This makes it possible to embed a web server and that the students can realize the entire Lab using only an internet browser.  
@@ -23,17 +25,17 @@ The system is composed this system is composed of
 
 - [Two motors with encoders](https://store.digilentinc.com/dc-motor-gearbox-1-53-gear-ratio-custom-6v-motor-designed-for-digilent-robot-kits/)
 
-<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/moteur-reducteur-avec-encodeur.png" alt="motor" width="150" />
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/moteur-reducteur-avec-encodeur.png" alt="motor" width="300" />
 
 
 
 - [Motor hubs](https://www.lextronic.fr/moyeux-pour-moteurs-pololu-30809.html)
 
-![moyeux](https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/moyeux-pour-moteurs-pololu.jpg)
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/moyeux-pour-moteurs-pololu.jpg" alt="moyeux " width="150" />
 
 - [60 mm wheels](https://www.lextronic.fr/paire-de-roues-diametre-60-mm-30817.html)
 
-![wheel](https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/paire-de-roues-diametre-60-mm.jpg)
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/paire-de-roues-diametre-60-mm.jpg" alt="wheel " width="300"/>
 
 - [Motor support](https://www.lextronic.fr/support-pour-moteurs-30627.html)
 
