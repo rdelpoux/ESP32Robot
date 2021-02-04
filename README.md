@@ -17,13 +17,13 @@ The system is composed this system is composed of
 
 - [Dual half bridge](https://store.digilentinc.com/pmod-dhb1-dual-h-bridge/)
 
-<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/Pmod_DHB1.png" alt="Dual-brige " style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/Pmod_DHB1.png" alt="Dual-brige " width="150" />
 
 
 
 - [Two motors with encoders](https://store.digilentinc.com/dc-motor-gearbox-1-53-gear-ratio-custom-6v-motor-designed-for-digilent-robot-kits/)
 
-<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/moteur-reducteur-avec-encodeur.png" alt="motor" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/moteur-reducteur-avec-encodeur.png" alt="motor" width="150" />
 
 
 
