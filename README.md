@@ -6,7 +6,12 @@ This repository is dedicated to the development of a new mobile robot for Labs p
 
 Given the specifications, our choice is directed to an ESP32 controller. This makes it possible to embed a web server and that the students can realize the entire Lab using only an internet browser.  
 
-## Contibutors
+## Content 
+
+- [Contributors] (#contributors)
+- 
+
+## Contributors <a name="contributors"></a>
 
 - Romain DELPOUX (Romain.Delpoux at insa-lyon.fr), Assistant Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
 
@@ -19,7 +24,7 @@ The system is composed this system is composed of
 
 - Home made control PCB
 
-under contruction
+under construction
 
 - [Dual half bridge](https://store.digilentinc.com/pmod-dhb1-dual-h-bridge/)
 
@@ -47,7 +52,7 @@ under contruction
 
 - [Free wheel](https://www.manomano.fr/catalogue/p/litzee-transfert-a-billes-roulettes-pour-meubles-roulettes-transfert-a-rouleaux-unites-de-transfert-a-billes-fer-galvanise-avec-boules-en-nylon-pour-transmission-meubles-fauteuil-roulant-6-pieces-28320695?g=1&referer_id=689880&cq_src=google_ads&cq_cmp=11057446537&cq_con=110150695580&cq_term=&cq_med=pla&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&cq_plt=gp&gclid=Cj0KCQiA0-6ABhDMARIsAFVdQv8q6O9rFnHw9-YfIDL3XiyYXy5AE14RHB-vroiU9LCYbMjPGpgr8QIaAvA5EALw_wcB#/)
 
-<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/free-wheel.jpg" alt="free-wheel " style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/free-wheel.jpg" alt="free-wheel " width="200"/>
 
 - Home made body
 
@@ -55,15 +60,13 @@ Under construction
 
 
 
+## License
 
+The proposed materials on this repository are free of charge to use and is openly distributed, but note that
 
-
-
-
-
-
-
-
+1.  Copyright owned by Romain Delpoux.
+2.  The algorithms, or forks of the algorithms may not be re-distributed as a part of a commercial product unless agreed upon with the copyright owner. 
+4. This work is distributed in the hope that it will be useful, but without any warranty, without event the implied warranty of merchantability or fitness for a particular purpose.
 
 
 
