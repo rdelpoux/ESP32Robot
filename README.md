@@ -8,7 +8,7 @@ Given the specifications, our choice is directed to an ESP32 controller. This ma
 
 ## Content 
 
-- [Contributors] (#contributors)
+- [Contributors](#contributors)
 - 
 
 ## Contributors <a name="contributors"></a>
