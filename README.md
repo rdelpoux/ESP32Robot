@@ -17,6 +17,10 @@ Given the specifications, our choice is directed to an ESP32 controller. This ma
 
 The system is composed this system is composed of 
 
+- Home made control PCB
+
+under contruction
+
 - [Dual half bridge](https://store.digilentinc.com/pmod-dhb1-dual-h-bridge/)
 
 <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/Pmod_DHB1.png" alt="Dual-brige " width="150" />
@@ -43,11 +47,27 @@ The system is composed this system is composed of
 
 - [Free wheel](https://www.manomano.fr/catalogue/p/litzee-transfert-a-billes-roulettes-pour-meubles-roulettes-transfert-a-rouleaux-unites-de-transfert-a-billes-fer-galvanise-avec-boules-en-nylon-pour-transmission-meubles-fauteuil-roulant-6-pieces-28320695?g=1&referer_id=689880&cq_src=google_ads&cq_cmp=11057446537&cq_con=110150695580&cq_term=&cq_med=pla&cq_plac=&cq_net=g&cq_pos=&cq_plt=gp&cq_plt=gp&gclid=Cj0KCQiA0-6ABhDMARIsAFVdQv8q6O9rFnHw9-YfIDL3XiyYXy5AE14RHB-vroiU9LCYbMjPGpgr8QIaAvA5EALw_wcB#/)
 
-  <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/free-wheel.jpg" alt="free-wheel " style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/free-wheel.jpg" alt="free-wheel " style="zoom:30%;" />
 
-  
+- Home made body
 
-  
+Under construction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
