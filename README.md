@@ -4,12 +4,13 @@
 
 This repository is dedicated to the development of a new mobile robot for Labs proposed for student in the French engineering school [INSA Lyon](www.insa-lyon.fr). In a COVID context the objective is to propose to our student automatic control lab which can be taught both in class and remotely in the event of confinement. The constraint is to be able to illustrate the basic automatic control principles on a simple system, without the need for software requiring a significant computing capacity.  During the lab, Matlab/Simulink:registered:  can be used to do the corrector synthesis, but the students can access it remotely using a VPN.
 
-Given the specifications, our choice is directed to an ESP32 controller. This makes it possible to embed a web server and that the students can realize the entire Lab using only an internet browser.  
+Given the specifications, our choice is directed to an ESP32 controller. This makes it possible to embed a web server and that the students can realize the entire Lab using only an Internet browser.  
 
 ## Content 
 
 - [Contributors](#contributors)
-- 
+- [System description](#systemdescription)
+- [License](#license)
 
 ## Contributors <a name="contributors"></a>
 
@@ -18,11 +19,15 @@ Given the specifications, our choice is directed to an ESP32 controller. This ma
 - Florian Bianco (Florian.Bianco at univ-lyon1.fr), Teacher, IUT GEII Lyon.
 - Pascal Bevilacqua (pascal.bevilacqua at insa-lyon.fr), Engineer, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
 
-## System description
+## System description <a name="systemdescription"></a>
 
 The system is composed this system is composed of 
 
 - Home made control PCB
+
+  [The PCB description can be found here](/PCB/PCBdesign.md)
+
+  
 
 under construction
 
@@ -60,7 +65,7 @@ Under construction
 
 
 
-## License
+## License <a name="license"></a>
 
 The proposed materials on this repository are free of charge to use and is openly distributed, but note that
 
