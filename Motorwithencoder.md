@@ -45,8 +45,6 @@ pinMode(enable1Pin, OUTPUT);
 
  
 
-
-
 ### Encoder
 
 For this section refer to [PJRC website](https://www.pjrc.com/teensy/td_libs_Encoder.html) : Encoders can sense movement in either direction, by detecting holes or marks as they move past 2 positions.  When the blue disc in the diagram below spins clockwise, the changes are first detected by pin 1, and then by pin 2.  When it spins counterclockwise, pin 2 is first to detect changes.  This scheme is called "quadrature encoding" because the waveforms detected by the 2 pins are 90 degrees out of phase.
