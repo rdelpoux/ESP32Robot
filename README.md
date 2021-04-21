@@ -50,7 +50,7 @@ The objective of this first session is to discover the system. At the end of the
 - Use encoders.
 - Use FreeRTOS, for real time control.
 
-### System description
+### System description
 
 For system description goto : [System description page](/SystemDescription.md)
 
