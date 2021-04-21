@@ -65,7 +65,7 @@ There’s an add-on for the Arduino IDE allows you to program the ESP32 using th
 
 ### DC motor with encoder
 
-The tutorial to drive the DC motor can be found here : [DC Motor with encoder](\Motorwithencoder.md)
+The tutorial to drive the DC motor can be found here : [DC Motor with encoder](/Motorwithencoder.md)
 
 ## Session 2 <a name="session2"></a>
 
