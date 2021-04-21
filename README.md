@@ -63,6 +63,10 @@ There’s an add-on for the Arduino IDE allows you to program the ESP32 using th
 - [**Windows** instructions – Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
 - [**Mac and Linux** instructions – Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/)
 
+### DC motor with encoder
+
+The tutorial to drive the DC motor can be found here : [DC Motor with encoder](\Motorwithencoder.md)
+
 ## Session 2 <a name="session2"></a>
 
 TBD
