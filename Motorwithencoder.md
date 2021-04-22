@@ -1,3 +1,5 @@
+[Back to main page](/README.md)
+
 # DC motor with encoder
 
 The mobile robot is made up of two [DC motors with encoders](https://store.digilentinc.com/dc-motor-gearbox-1-53-gear-ratio-custom-6v-motor-designed-for-digilent-robot-kits/) and two [2A-H-bridge](https://reference.digilentinc.com/reference/pmod/pmodhb5/reference-manual)
@@ -6,9 +8,11 @@ The mobile robot is made up of two [DC motors with encoders](https://store.digil
 
 <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/pmodhb5-0.png" alt="Dual-brige " width="150" />
 
+[Back to main page](/README.md)
+
 ## PWM principle
 
-The ESP32 has digital output only while to drive DC motor, it is necessary to apply analog voltage. It requires to convert dtigital to analog signals. For this we use a PWM (Pulse Width Modulation). The PWM is a technique used to reconstruct continuous signals using on / off circuits, i.e. Boolean outputs. A PWM signal is represented as :
+The ESP32 has digital output only while to drive DC motor, it is necessary to apply analog voltage. It requires to convert digital to analog signals. For this we use a PWM (Pulse Width Modulation). The PWM is a technique used to reconstruct continuous signals using on / off circuits, e.g. Boolean outputs. A PWM signal is represented as :
 
 <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/PWMPrinciple.png" alt="Dual-brige " width="500" />
 
@@ -70,7 +74,7 @@ Finally, the PWM signal is attached to the desired pin :
 ledcAttachPin(motorxEnable, pwmChannel);
 ```
 
-- **Moving the DC**
+- **Moving the DC motor**
 
 To apply different voltage to the motor, we need to change the PWM signal duty cycle. For that you use the ledcWrite()  function that accepts as arguments the PWM channel that is generating  the signal (not the output GPIO) and the duty cycle, as follows.
 
@@ -86,15 +90,28 @@ To move the motor forward, you set motor**X**Dir pin to LOW, to move the motor b
 digitalWrite(motorXDir, LOW);
 ```
 
-### Encoder
+[Back to main page](/README.md)
+
+## Encoder
+
+Magnetic rotary encoders are devices that convert angular position into digital signals for use within measurement or control systems. Magnetic encoders use a combination of permanent magnets and magnetic sensors to detect movement and position. 
+
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/encoder.jpg" alt="Dual-brige " width="500" />
+
+<img src="img/encoder.jpg" alt="Dual-brige " width="500" />
 
 For this section refer to [PJRC website](https://www.pjrc.com/teensy/td_libs_Encoder.html) : Encoders can sense movement in either direction, by detecting holes or marks as they move past 2 positions.  When the blue disc in the diagram below spins clockwise, the changes are first detected by pin 1, and then by pin 2.  When it spins counterclockwise, pin 2 is first to detect changes.  This scheme is called "quadrature encoding" because the waveforms detected by the 2 pins are 90 degrees out of phase.
 
 <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/td_libs_Encoder_pos1.png" alt="Dual-brige " width="500" />
 
+[Back to main page](/README.md)
+
 ## Sources
 
 - [ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/index.html)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/index.html)
 - ["ESP32 with DC Motor and L298N Motor Driver – Control Speed and Direction" ](https://randomnerdtutorials.com/esp32-dc-motor-l298n-motor-driver-control-speed-direction/)
+- [Understanding Resolution in optical and magnetic Encoders ](https://www.elektronikpraxis.vogel.de/understanding-resolution-in-optical-and-magnetic-encoders-a-427263/)
 - [PJRC Electronic Projects Components Available Worldwide](https://www.pjrc.com/teensy/td_libs_Encoder.html)
+
+[Back to main page](/README.md)
 
