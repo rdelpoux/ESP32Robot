@@ -87,8 +87,8 @@ Hold-down the **RESET** and **BOOT** button in your ESP32 board, then release  *
 
 [Back to main page](/README.md)
 
-
-
 ## Sources 
 
 - [https://lastminuteengineers.com/esp32-arduino-ide-tutorial/](https://lastminuteengineers.com/esp32-arduino-ide-tutorial/)
+
+[Back to main page](/README.md)
