@@ -54,16 +54,16 @@ void setup() {
 
   // interruption
   pinMode(S1A , INPUT_PULLUP);
-  attachInterrupt(S1A , isr1A, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(S1A) , isr1A, CHANGE);
 
   pinMode(S1B , INPUT_PULLUP);
-  attachInterrupt(S1B , isr1B, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(S1B) , isr1B, CHANGE);
 
   pinMode(S2A , INPUT_PULLUP);
-  attachInterrupt(S2A , isr2A, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(S2A) , isr2A, CHANGE);
 
   pinMode(S2B , INPUT_PULLUP);
-  attachInterrupt(S2B , isr2B, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(S2B), isr2B, CHANGE);
 
   
 }
