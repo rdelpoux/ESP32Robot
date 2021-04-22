@@ -16,7 +16,7 @@ The ESP32 has digital output only while to drive DC motor, it is necessary to ap
 
 <img src="img/PWMPrinciple.png" alt="Dual-brige " width="500" />
 
-The principle is to generate high frequency rectangular pulse wave. Over a period **T**, the pulse width can take a value between 0 and T. The pulse width  divided by the period T is called the duty cycle and is denote <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/alpha.png" style="zoom:1.5%;" /> on the figure. The average output voltage will therefore be equal to v (t) =  <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/alpha.png" width="15" />Vcc. This average voltage is shown in red in the figure. 
+The principle is to generate high frequency rectangular pulse wave. Over a period **T**, the pulse width can take a value between 0 and T. The pulse width  divided by the period T is called the duty cycle and is denote <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/alpha.png" width="15" /> on the figure. The average output voltage will therefore be equal to v (t) =  <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/alpha.png" width="15" />Vcc. This average voltage is shown in red in the figure. 
 
 The voltage delivered by the ESP32 rages between **0** et **3.3v**. Using a 8-bits resolution, the duty cycle ranges between **0** and **255**. In practice, a voltage between **-Vmax** and **Vmax** needs to be applied on the motor, done using an H bridge. 
 
