@@ -83,6 +83,10 @@ const char* ssid     = "robotX";
 - In your smartphone open your Wi-Fi settings and tap the **robotX** network.
 - Open your web browser and type the IP address 192.168.4.1. The web server page should.
 
+### ESP32 FreeRTOS
+
+- [FreeRTOS](http://tvaira.free.fr/esp32/esp32-freertos.html)
+
 ## Session 2 <a name="session2"></a>
 
 
