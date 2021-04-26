@@ -126,7 +126,7 @@ attachInterrupt(digitalPinToInterrupt(pin), ISR, mode)
 
 The ESP32 has a Pulse counter module. The PCNT (Pulse Counter) module is designed to count the number of  rising and/or falling edges of an input signal. Each pulse counter unit  has a 16-bit signed counter register and two channels that can be  configured to either increment or decrement the counter. Each channel  has a signal input that accepts signal edges to be detected, as well as a control input that can be used to enable or disable the signal input.  The inputs have optional filters that can be used to discard unwanted  glitches in the signal.
 
-A library for the use of this module is available on [madhephaestus GITHUB Repository](https://github.com/ESP32Encoder).
+A library for the use of this module is available on [madhephaestus GITHUB Repository](https://github.com/madhephaestus/ESP32Encoder).
 
 [Back to main page](/README.md)
 
