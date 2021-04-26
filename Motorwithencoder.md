@@ -66,7 +66,7 @@ pinMode(motor2Dir, OUTPUT);
 ledcSetup(pwmChannel, freq, resolution);
 ```
 
-In our case, we're generating a PWM signal at 2000Hz with a 8-bit resolution, on channel 0 for motor 1 and channel 1 for motor 2. 
+In our case, we're generating a PWM signal at 500Hz with a 8-bit resolution, on channel 0 for motor 1 and channel 1 for motor 2. 
 
 Finally, the PWM signal is attached to the desired pin : 
 

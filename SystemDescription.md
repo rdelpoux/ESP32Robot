@@ -8,7 +8,7 @@
 
 ## System
 
-The system is composed this system is composed of 
+The system is composed of 
 
 - [2A-H-bridge](https://reference.digilentinc.com/reference/pmod/pmodhb5/reference-manual)
 
