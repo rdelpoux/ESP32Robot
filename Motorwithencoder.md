@@ -109,6 +109,7 @@ On software side, the objective is to detect raising and falling edge. Without k
 - Syntax
 
 ```c
+pinMode(S1A , INPUT_PULLUP);
 attachInterrupt(digitalPinToInterrupt(pin), ISR, mode)
 ```
 
