@@ -140,6 +140,7 @@ A library for the use of this module is available on [madhephaestus GITHUB Repos
 - ["ESP32 with DC Motor and L298N Motor Driver – Control Speed and Direction" ](https://randomnerdtutorials.com/esp32-dc-motor-l298n-motor-driver-control-speed-direction/)
 - [Understanding Resolution in optical and magnetic Encoders ](https://www.elektronikpraxis.vogel.de/understanding-resolution-in-optical-and-magnetic-encoders-a-427263/)
 - [Arduino attachInterrupt()](https://www.arduino.cc/reference/en/language/functions/external-interrupts/attachinterrupt/)
+- [Pull-up resistor](https://en.wikipedia.org/wiki/Pull-up_resistor)
 
 [Back to main page](/README.md)
 
