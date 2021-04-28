@@ -106,6 +106,10 @@ For an animation visit [PJRC website](https://www.pjrc.com/teensy/td_libs_Encode
 
 On software side, the objective is to detect raising and falling edge. Without knowing the motor speed, the edge occurrence is unknown. To ensure that a program always caught the pulses from the  rotary encoder, so that it never misses a pulse, it would make it very  tricky to write a program to do anything else, because the program would need to constantly poll the sensor lines for the encoder, in order to  catch pulses when they occurred.  Using an interrupt can free the microcontroller to get some other work done while not missing the input.
 
+- Pull-Up resistor
+
+<img src="img/Pullup_Resistor.png" alt="Dual-brige " width="200" />
+
 - Syntax
 
 ```c
