@@ -1,18 +1,6 @@
 # Closed loop control
 
-Download the files for the lab : [download the code](/Programmes/ControlRobotESP.zip). 
-
-- In the file "robotnumber.h" change your robot number. The number is the number written on the robot + 100
-
-```c
-#ifndef ROBOTNUMBER_H_
-#define ROBOTNUMBER_H_
-
-#define ROBOTNUMBER 101 // 100+robotnumber
-
-#endif /* ROBOTNUMBER_H_ */
-
-```
+Download the files for the lab : [download the code](/Programmes/ControlRobotESP_AP_OK.zip). 
 
 ## Required work 
 
