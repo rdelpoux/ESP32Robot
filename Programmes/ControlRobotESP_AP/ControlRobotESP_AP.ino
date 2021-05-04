@@ -25,7 +25,7 @@ extern "C" {
 
 
 const char* ssid = "Robot1";
-const char* password =  "123456789";
+const char* password =  "123456789"; // choose only numeric password
 
 
 WiFiServer wifiServer(80);
