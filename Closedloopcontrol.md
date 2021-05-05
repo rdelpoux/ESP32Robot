@@ -2,8 +2,6 @@
 
 Download the files for the lab : [download the code](/Programmes/ControlRobotESP_AP.zip). 
 
-
-
 ## Required work 
 
 ### Modeling
@@ -24,3 +22,4 @@ The objective is to propose a speed control of the robot.
 - Using Matlab/Simulink, propose a simulation scheme and test the proposed control law.
 - Apply the control law to the robot.
 - Record the experimental data of the system, plot them on Simulink and discuss compliance with the specifications.
+

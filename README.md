@@ -95,11 +95,14 @@ The objective of the lab is to implement a speed control so that the robot moves
 
 ## Session 3 <a name="session3"></a>
 
-TBD
+To implement different control laws on the robot we propose here a solution for automatic code generation :
+
+- [Automatic code generation](AutomaticCodeGeneration.md)
 
 ## Sources <a name="sources"></a>
 
 - [https://randomnerdtutorials.com](https://randomnerdtutorials.com)
+- [ESP32 + FreeRTOS](http://tvaira.free.fr/esp32/esp32-freertos.html)
 
 ## License <a name="license"></a>
 
