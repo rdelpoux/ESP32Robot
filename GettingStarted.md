@@ -4,7 +4,11 @@
 
 1. In your Arduino IDE, go to **File**> **Preferences**
 
+<<<<<<< HEAD
    <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS1.png" alt="Dual-brige " width="200" />
+=======
+   ![GS1](../ESP32Robot/img/GettingStarted/GS1.png)
+>>>>>>> 3cc2da292404f53ca0aed167799ee0f2f2fb35c6
 
 2. Enter **https://dl.espressif.com/dl/package_esp32_index.json** into the “Additional Board Manager URLs” field as shown in the figure below. Then, click the “OK” button:
 
