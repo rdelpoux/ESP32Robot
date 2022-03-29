@@ -4,23 +4,23 @@
 
 1. In your Arduino IDE, go to **File**> **Preferences**
 
-   ![](..\ESP32Robot\img\GettingStarted\GS1.png)
+   <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS1.png" alt="Dual-brige " width="200" />
 
 2. Enter **https://dl.espressif.com/dl/package_esp32_index.json** into the “Additional Board Manager URLs” field as shown in the figure below. Then, click the “OK” button:
 
-   ![](img\GettingStarted\GS2.png)
+   <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS2.png" alt="Dual-brige " width="800" />
 
 3. Open the Boards Manager. Go to **Tools** > **Board** > **Boards Manager…**
 
-   ![](img\GettingStarted\GS3.png)
+   <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS3.png" alt="Dual-brige " width="600" />
 
 4. Search for **ESP32** and press install button for the “**ESP32 by Espressif Systems**“:
 
-   ![](img\GettingStarted\GS4.png)
+   <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS4.png" alt="Dual-brige " width="800" />
 
 5. That’s it. It should be installed after a few seconds.
 
-   ![](img\GettingStarted\GS5.png)
+   <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS5.png" alt="Dual-brige " width="800" />
 
 ### Program Upload
 
