@@ -57,7 +57,7 @@ For system description goto : [System description page](/SystemDescription.md)
 
 ### Getting Started with the ESP32 Development Board
 
-There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](/GettingStard.md)
+There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](/GettingStarted.md)
 
 
 
