@@ -59,8 +59,6 @@ For system description goto : [System description page](/SystemDescription.md)
 
 There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](/GettingStarted.md)
 
-
-
 ### DC motor with encoder
 
 The tutorial to drive the DC motor can be found here : [DC Motor with encoder](/Motorwithencoder.md)
