@@ -57,12 +57,9 @@ For system description goto : [System description page](/SystemDescription.md)
 
 ### Getting Started with the ESP32 Development Board
 
-- [Preparing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/getting-started-with-esp32/)
+There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](/GettingStard.md)
 
-There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language. Follow one of the  next tutorials to prepare your Arduino IDE:
 
-- [**Windows** instructions – Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
-- [**Mac and Linux** instructions – Installing the ESP32 Board in Arduino IDE](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/)
 
 ### DC motor with encoder
 

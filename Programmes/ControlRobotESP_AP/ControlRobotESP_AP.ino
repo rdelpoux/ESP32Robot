@@ -24,7 +24,7 @@ extern "C" {
 
 
 
-const char* ssid = "RobotDeMerde";
+const char* ssid = "Robot";
 const char* password =  "123456789"; // choose only numeric password
 
 
@@ -205,6 +205,9 @@ void mode_step() {
  */
 
 void mode_cl() {
+
+
+  
   data_0 = 1000 * 0;
   data_1 = 1000 * 0;
   data_2 = 1000 * 0;
