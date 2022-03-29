@@ -41,6 +41,14 @@ At the end of this project, students should be able to :
 - Design and implement a control law (Simulation + Experimentation)
 - Enjoy !!!
 
+## Real Time Closed Loop Control  <a name="session1"></a>
+
+<img src="img/ControlLoop/CL1.png" alt="motor" width="800" />
+
+<img src="img/ControlLoop/CL2.png" alt="motor" width="800" />
+
+<img src="img/ControlLoop/CL3.png" alt="motor" width="800" />
+
 ## Session 1 <a name="session1"></a>
 
 The objective of this first session is to discover the system. At the end of the session, the student should have 
