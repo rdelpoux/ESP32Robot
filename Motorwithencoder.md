@@ -12,7 +12,7 @@ The mobile robot is made up of two [DC motors with encoders](https://store.digil
 
 ## PWM principle
 
-The ESP32 has digital output only while to drive DC motor, it is necessary to apply analog voltage. It requires to convert digital to analog signals. For this we use a PWM (Pulse Width Modulation). The PWM is a technique used to reconstruct continuous signals using on / off circuits, e.g. Boolean outputs. A PWM signal is represented as :
+The ESP32 has digital output only, while, to drive DC motor, it is necessary to apply analog voltage. It requires to convert digital to analog signals. For this we use a PWM (Pulse Width Modulation). The PWM is a technique used to reconstruct continuous signals using on / off circuits, e.g. Boolean outputs. A PWM signal is represented as :
 
 <img src="img/PWMPrinciple.png" alt="Dual-brige " width="500" />
 
