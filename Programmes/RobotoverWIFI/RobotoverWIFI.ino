@@ -110,8 +110,8 @@ void motorForward(){
 
 void motorLeft(){
   // Define duty cycle
-  ledcWrite(motor1Channel, dutyCycle/2);
-  ledcWrite(motor2Channel, dutyCycle/2);
+  ledcWrite(motor1Channel, dutyCycle);
+  ledcWrite(motor2Channel, dutyCycle);
   // Choose direction
   digitalWrite(motor1Dir, LOW);
   digitalWrite(motor2Dir, LOW);    
