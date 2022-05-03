@@ -101,8 +101,8 @@ void setup() {
   */
   pinMode(pinControlTask, OUTPUT);
   pinMode(pinWifiTask, OUTPUT);
-  xTaskCreate(periodicControlTask, "periodicControlTask", 10000, NULL, 2, NULL);
-  xTaskCreate(periodicWifiTask, "periodicWifiTask", 10000, NULL, 3, NULL);
+  xTaskCreate(periodicControlTask, "periodicControlTask", 10000, NULL, 9, NULL);
+  xTaskCreate(periodicWifiTask, "periodicWifiTask", 10000, NULL, 8, NULL);
 
 
   // Configure Motors
