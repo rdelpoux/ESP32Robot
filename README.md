@@ -13,6 +13,7 @@ Given the specifications, our choice is directed to an ESP32 controller. This lo
 - [Session 1](#session1)
 - [Session 2](#session2)
 - [Session 3](#session3)
+- [Appendix](#appendix)
 - [Sources](#sources)
 - [License](#license)
 
@@ -28,7 +29,7 @@ The Lab is divided into 3 sessions of 4 hours.
 
 1. Getting to know the system and the control environment (4h)
 2. Robot speed control (4h)
-3. Robot trajectory tracking (4h)
+3. Robot line follower (4h)
 
 At the end of this project, students should be able to :
 
@@ -96,6 +97,12 @@ The objective of the lab is to implement a speed control so that the robot moves
 - Instructions are given here : [Closed Loop Control](Closedloopcontrol.md)
 
 ## Session 3 <a name="session3"></a>
+
+The objective of the lab is to implement a angle tracking controller in addition to the speed controller developed at the previous lecture for the robot to follow the line, at constant speed.
+
+- Instructions are given here : [Line follower tracking controller](LineFollower.md)
+
+## Appendix <a name="appendix"></a>
 
 To implement different control laws on the robot we propose here a solution for automatic code generation :
 
