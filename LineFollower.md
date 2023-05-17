@@ -9,7 +9,7 @@ The robot is composed of two independent motors on the same axis of rotation and
 - ω1 and ω2 are respectively the angular speed [rad/s] of wheel 1 and wheel 2, measured by the encoder.
 - r = 60 mm  is the radius of the wheels 
 - v1 and v2 are the linear speed of each  wheel
-- d is the distance between the wheels 
+- d = 0.18 m is the distance between the wheels 
 
 The linear speed of the system is computed via the measured angular speed : 
 
