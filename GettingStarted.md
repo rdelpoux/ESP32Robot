@@ -14,7 +14,9 @@
 
    <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS3.png" alt="Dual-brige " width="600" />
 
-4. Search for **ESP32** and press install button for the “**ESP32 by Espressif Systems**“:
+4. Search for **ESP32** and press install button for the “**ESP32 by Espressif Systems**“: 
+
+   ​	Be careful Install **version 1.0.6.** Version 2 is not compatible.
 
    <img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/GettingStarted/GS4.png" alt="Dual-brige " width="800" />
 

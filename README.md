@@ -21,6 +21,8 @@ Given the specifications, our choice is directed to an ESP32 controller. This lo
 
 - Romain Delpoux (Romain.Delpoux at insa-lyon.fr), Associate Professor, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
 - Hiba Houmsi (Hiba.Houmsi at insa-lyon.fr), PhD student, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
+- Samar Alhaj Hassan (samar.alhaj-hassan@insa-lyon.fr), PhD student, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
+- Gaël Métras (gael.metras@insa-lyon.fr), Engineer, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
 - Pascal Bevilacqua (pascal.bevilacqua at insa-lyon.fr), Engineer, INSA de Lyon, Laboratoire Ampère UMR CNRS 5005.
 
 ## Lab objective <a name="objective"></a>
