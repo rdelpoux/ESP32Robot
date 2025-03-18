@@ -1,4 +1,4 @@
-[Back to main page](/README.md)
+[Back to main page](README.md)
 
 # DC motor with encoder
 
@@ -34,13 +34,13 @@ The PmodHB5 utilizes a full H-Bridge circuit to allow users to drive DC motors f
 
 #### PWM control code 
 
-The [LED control (LEDC)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/ledc.html) peripheral is primarily designed to control the  intensity of LEDs, although it can also be used to generate PWM signals  for other purposes. It has 16 channels which can generate independent waveforms that can be  used.
+The [LED control (LEDC)](https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/api/ledc.html) peripheral is primarily designed to control the  intensity of LEDs, although it can also be used to generate PWM signals  for other purposes. It has 16 channels which can generate independent waveforms that can be  used.
 
 The following steps detail how to control the DC motor using PWM on ESP32.
 
-- Declaring motor pins 
+- Declaration of motor pins 
 
-For motor pins table, refer the the [system description page](/SystemDescription.md). First define the GPIOs the motor pine are connected to.
+From motor pins table, refer to the [system description page](/SystemDescription.md). First define the GPIO pin connected to the motor :
 
 ```c
 int motor1Enable = 32;
@@ -49,9 +49,9 @@ int motor2Enable = 33;
 int motor2Dir = 17;    
 ```
 
-- Program **setup()** function
+- Add in the `setup()` function the following intructions:
 
-In the **setup()**, first set the motor pins as outputs.
+First set the motor pins as outputs.
 
 ```c
 pinMode(motor1Enable, OUTPUT);
@@ -60,26 +60,25 @@ pinMode(motor2Enable, OUTPUT);
 pinMode(motor2Dir, OUTPUT);
 ```
 
- Configure PWM signal is done by setting the PWM channel, frequency and resolution as follow :
+ To Configure PWM, the first step is select the pin to attach the PWM signal, its frequency and resolution as follows:
 
 ```c
-ledcSetup(pwmChannel, freq, resolution);
+ledcAttach(uint8_t pin, uint32_t freq, uint8_t resolution);
 ```
 
-In our case, we're generating a PWM signal at 500Hz with a 8-bit resolution, on channel 0 for motor 1 and channel 1 for motor 2. 
+- `pin` select LEDC pin.
+- `freq` select frequency of pwm.
+- `resolution` select resolution for LEDC channel.
+  - range is 1-14 bits (1-20 bits for ESP32).
 
-Finally, the PWM signal is attached to the desired pin : 
-
-```c
-ledcAttachPin(motorxEnable, pwmChannel);
-```
+In our case, we're generating a PWM signal at 500Hz with 8-bit resolution for both motors. 
 
 - **Moving the DC motor**
 
-To apply different voltage to the motor, we need to change the PWM signal duty cycle. For that you use the ledcWrite()  function that accepts as arguments the PWM channel that is generating  the signal (not the output GPIO) and the duty cycle, as follows.
+To apply different voltages to the motor, we need to change the PWM signal's duty cycle. For this purpose, use the `ledcWrite()` function, which takes the motor pin and the duty cycle as arguments, as follows:
 
 ```c
-ledcWrite(pwmChannel, dutyCycle);
+ledcWrite(uint8_t pin, uint32_t duty);
 ```
 
 - **Moving the DC motors forward or backwards**
@@ -132,7 +131,7 @@ The ESP32 has a Pulse counter module. The PCNT (Pulse Counter) module is designe
 
 A library for the use of this module is available on [madhephaestus GITHUB Repository](https://github.com/madhephaestus/ESP32Encoder).
 
-[Back to main page](/README.md)
+[Back to main page](README.md)
 
 ## Sources
 

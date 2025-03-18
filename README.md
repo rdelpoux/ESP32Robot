@@ -67,17 +67,17 @@ For system description goto : [System description page](/SystemDescription.md)
 
 ### Getting Started with the ESP32 Development Board
 
-There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](/GettingStarted.md)
+There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](GettingStarted.md)
 
 ### DC motor with encoder
 
-The tutorial to drive the DC motor can be found here : [DC Motor with encoder](/Motorwithencoder.md)
+The tutorial to drive the DC motor can be found here : [DC Motor with encoder](Motorwithencoder.md)
 
 ### Motor control over Wi-fi
 
-To drive the system over Wi-Fi : [download the code](/Programmes/RobotoverWIFI.zip). 
+To drive the system over Wi-Fi : [download the code](Programmes/RobotoverWIFI.zip). 
 
-The code is based on [ESP32 Access Point (AP) for Web Server tutorial](https://randomnerdtutorials.com/esp32-access-point-ap-web-server/). To use the code : 
+The code is based on [ESP32 Access Point (AP) for Web Server tutorial](https://randomnerdtutorials.com/esp32-access-point-ap-web-server/). To use this code : 
 
 - Make sure that you have change the **ssid** in the code
 

@@ -1,6 +1,7 @@
-#include "ESP32Encoder.h"
+//#include "ESP32Encoder.h"
 #include <WiFi.h>
-
+#include <NetworkClient.h>
+#include <WiFiAP.h>
 /* Sources
 
    https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
@@ -8,14 +9,14 @@
 
 */
 
-WiFiServer server(80);
+NetworkServer server(80);
 
 
 // Change the name of the ssid otherwise, alle the robots will have the same name...
 const char* ssid     = "robot1";
 
-ESP32Encoder encoderA;
-ESP32Encoder encoderB;
+//ESP32Encoder encoderA;
+//ESP32Encoder encoderB;
 
 // Auxiliar variables to store the current output state
 String outputForward = "off";
@@ -57,7 +58,7 @@ void setup() {
 
   // Wi-Fi config
   Serial.println("\n[INFO] Configuring access point");
-  WiFi.mode(WIFI_AP);  
+  //WiFi.mode(WIFI_AP);  
   WiFi.softAP(ssid);
   server.begin();
 
@@ -70,26 +71,23 @@ void setup() {
   pinMode(motor2Enable, OUTPUT);
   pinMode(motor2Dir, OUTPUT);
 
-  // Configure PWM signal ledcSetup(pwmChannel, freq, resolution);
-  ledcSetup(motor1Channel, 500, 8); // channel 0, 500Hz, 8-bits resolution
-  ledcSetup(motor2Channel, 500, 8); // channel 1, 500Hz, 8-bits resolution
-
-  // attach the channel to the GPIO to be controlled
-  ledcAttachPin(motor1Enable, motor1Channel); // attach channel 0 to motor 1
-  ledcAttachPin(motor2Enable, motor2Channel); // attach channel 1 to motor 2
+  // Configure PWM signal ledcAttach(pin, freq, resolution);
+  ledcAttach(motor1Enable,500, 8);
+  ledcAttach(motor2Enable,500, 8);
+  
 
   // Encoders Config
   // Enable the weak pull up resistors
-  ESP32Encoder::useInternalWeakPullResistors = UP;
+//  ESP32Encoder::useInternalWeakPullResistors = UDP;
 
   // Configure encoder A
-  encoderA.attachFullQuad(S1A, S1B);
+//  encoderA.attachFullQuad(S1A, S1B);
   // Configure encoder B
-  encoderB.attachFullQuad(S2B, S2A);
+//  encoderB.attachFullQuad(S2B, S2A);
 
   // clear the encoder's raw count and set the tracked count to zero
-  encoderA.clearCount();
-  encoderB.clearCount();
+//  encoderA.clearCount();
+//  encoderB.clearCount();
 
 
 
@@ -101,8 +99,8 @@ int dutyCycle = 100;
 
 void motorForward(){
   // Define duty cycle
-  ledcWrite(motor1Channel, dutyCycle);
-  ledcWrite(motor2Channel, dutyCycle);
+  ledcWrite(motor1Enable, dutyCycle);
+  ledcWrite(motor2Enable, dutyCycle);
   // Choose direction
   digitalWrite(motor1Dir, HIGH);
   digitalWrite(motor2Dir, LOW);
@@ -110,8 +108,8 @@ void motorForward(){
 
 void motorLeft(){
   // Define duty cycle
-  ledcWrite(motor1Channel, dutyCycle);
-  ledcWrite(motor2Channel, dutyCycle);
+  ledcWrite(motor1Enable, dutyCycle);
+  ledcWrite(motor2Enable, dutyCycle);
   // Choose direction
   digitalWrite(motor1Dir, LOW);
   digitalWrite(motor2Dir, LOW);    
@@ -119,8 +117,8 @@ void motorLeft(){
 
 void motorRight(){
   // Define duty cycle
-  ledcWrite(motor1Channel, dutyCycle);
-  ledcWrite(motor2Channel, dutyCycle);
+  ledcWrite(motor1Enable, dutyCycle);
+  ledcWrite(motor2Enable, dutyCycle);
   // Choose direction
   digitalWrite(motor1Dir, HIGH);
   digitalWrite(motor2Dir, HIGH);    
@@ -128,8 +126,8 @@ void motorRight(){
 
 void motorBackward(){
   // Define duty cycle
-  ledcWrite(motor1Channel, dutyCycle);
-  ledcWrite(motor2Channel, dutyCycle);
+  ledcWrite(motor1Enable, dutyCycle);
+  ledcWrite(motor2Enable, dutyCycle);
   // Choose direction
   digitalWrite(motor1Dir, LOW);
   digitalWrite(motor2Dir, HIGH);
@@ -137,8 +135,8 @@ void motorBackward(){
 
 void motorStop(){
     // Define duty cycle
-  ledcWrite(motor1Channel, 0);
-  ledcWrite(motor2Channel, 0);
+  ledcWrite(motor1Enable, 0);
+  ledcWrite(motor2Enable, 0);
   // Choose direction
   digitalWrite(motor1Dir, LOW);
   digitalWrite(motor2Dir, LOW);
