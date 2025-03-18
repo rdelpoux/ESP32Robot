@@ -67,17 +67,21 @@ For system description goto : [System description page](/SystemDescription.md)
 
 ### Getting Started with the ESP32 Development Board
 
-There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language : [Getting Started](GettingStarted.md)
+There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language: [Getting Started](GettingStarted.md)
+
+### Arduino Tutorial
+
+A tutorial for basic arduino instructions can be found here: [Getting started with arduino](TutoArduino/GettingStartedWithArduino.md)
 
 ### DC motor with encoder
 
-The tutorial to drive the DC motor can be found here : [DC Motor with encoder](Motorwithencoder.md)
+The tutorial to drive the DC motor can be found here: [DC Motor with encoder](Motorwithencoder.md)
 
 ### Motor control over Wi-fi
 
 To drive the system over Wi-Fi : [download the code](Programmes/RobotoverWIFI.zip). 
 
-The code is based on [ESP32 Access Point (AP) for Web Server tutorial](https://randomnerdtutorials.com/esp32-access-point-ap-web-server/). To use this code : 
+The code is based on [ESP32 Access Point (AP) for Web Server tutorial](https://randomnerdtutorials.com/esp32-access-point-ap-web-server/). To use this code: 
 
 - Make sure that you have change the **ssid** in the code
 
@@ -96,17 +100,17 @@ const char* ssid     = "robotX";
 
 The objective of the lab is to implement a speed control so that the robot moves straight ahead. 
 
-- Instructions are given here : [Closed Loop Control](Closedloopcontrol.md)
+- Instructions are given here: [Closed Loop Control](Closedloopcontrol.md)
 
 ## Session 3 <a name="session3"></a>
 
 The objective of the lab is to implement a angle tracking controller in addition to the speed controller developed at the previous lecture for the robot to follow the line, at constant speed.
 
-- Instructions are given here : [Line follower tracking controller](LineFollower.md)
+- Instructions are given here: [Line follower tracking controller](LineFollower.md)
 
 ## Appendix <a name="appendix"></a>
 
-To implement different control laws on the robot we propose here a solution for automatic code generation :
+To implement different control laws on the robot we propose here a solution for automatic code generation:
 
 - [Automatic code generation](AutomaticCodeGeneration.md)
 
