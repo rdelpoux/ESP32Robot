@@ -10,7 +10,7 @@
   - [3.3 Delay](#delay)
   - [3.4 Measuring Time Between Two Events](#measuringTime)
 
-## 1. Structure of an Arduino Program <a name="struct"></a>
+## 1. Structure of an Arduino Program <a name="struct"></a>
 
 The basic structure of the code using Arduino IDE is as follows:
 
@@ -37,7 +37,7 @@ void loop() {
 2. Verify your code by clicking the "Verify" button (✓ icon).
 3. Upload it to the board by clicking the "Upload" button (→ icon).
 
-## 3.  Basic Functions<a name="basicFun"></a>
+## 3. Basic Functions<a name="basicFun"></a>
 
 ### 3.1 Serial Communication<a name="serial"></a>
 Used to display debugging messages on the computer.
@@ -71,7 +71,7 @@ Serial.print("Value: ");
 Serial.println(value);
 ```
 
-### 3.2 Digital Read and Write <a name="digital"></a>
+### 3.2 Digital Read and Write <a name="digital"></a>
 
 Digital input and output are fundamental features of Arduino, allowing interaction with sensors, buttons, LEDs, and other components. 
 
