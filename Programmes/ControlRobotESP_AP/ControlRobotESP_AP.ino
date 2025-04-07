@@ -27,8 +27,7 @@ extern "C" {
 const char* ssid = "Robot";
 const char* password =  "123456789"; // choose only numeric password
 
-
-WiFiServer wifiServer(80);
+WiFiServer server(80);
 WiFiClient client;
 bool clientConnected = false;
 
@@ -53,10 +52,8 @@ Moteur moteur1;
 Moteur moteur2;
 uint8_t motor1Enable  = 32;
 uint8_t motor1Dir     = 16;
-uint8_t motor1Channel = 0;
 uint8_t motor2Enable  = 33;
 uint8_t motor2Dir     = 17;
-uint8_t motor2Channel = 1;
 
 
 // Encoder
@@ -87,34 +84,25 @@ void setup() {
 
   // Wi-Fi config
   Serial.println("\n[INFO] Configuring access point");
-  WiFi.mode(WIFI_AP);  
+  //WiFi.mode(WIFI_AP);
   WiFi.softAP(ssid, password);
- 
+
   Serial.print("[INFO] Started access point at IP ");
   Serial.println(WiFi.softAPIP());
 
 
-  wifiServer.begin();
-
-  /*
-     Free RTOS (http://tvaira.free.fr/esp32/esp32-freertos.html)
-  */
-  pinMode(pinControlTask, OUTPUT);
-  pinMode(pinWifiTask, OUTPUT);
-  xTaskCreate(periodicControlTask, "periodicControlTask", 10000, NULL, 9, NULL);
-  xTaskCreate(periodicWifiTask, "periodicWifiTask", 10000, NULL, 8, NULL);
-
+  server.begin();
 
   // Configure Motors
-  moteur1.config(motor1Enable, motor1Channel, motor1Dir, true, 30);
-  moteur2.config(motor2Enable, motor2Channel, motor2Dir, false, 30);
+  moteur1.config(motor1Enable, motor1Dir, true, 30);
+  moteur2.config(motor2Enable, motor2Dir, false, 30);
   moteur1.run();
   moteur2.run();
 
   // Configure Encoder
   // Encoders Config
   // Enable the weak pull up resistors
-  ESP32Encoder::useInternalWeakPullResistors = UP;
+  ESP32Encoder::useInternalWeakPullResistors = puType::up;
   // Configure encoder 1
   encoder1.attachFullQuad(S1A, S1B);
   // Configure encoder 2
@@ -124,6 +112,18 @@ void setup() {
   encoder2.clearCount();
 
   deltaPos = 2.0f * PI / (NBR_FRONT * REDUCTION_RATIO);
+
+
+
+  /*
+     Free RTOS (http://tvaira.free.fr/esp32/esp32-freertos.html)
+  */
+  pinMode(pinControlTask, OUTPUT);
+  pinMode(pinWifiTask, OUTPUT);
+  xTaskCreate(periodicControlTask, "periodicControlTask", 10000, NULL, 8, NULL);
+  xTaskCreate(periodicWifiTask, "periodicWifiTask", 10000, NULL, 9, NULL);
+
+
 
 }
 
@@ -153,12 +153,12 @@ float ref_2;
 
 
 /*
- * 
- * Mode Open Loop
- * 
- */
+
+   Mode Open Loop
+
+*/
 void mode_ol() {
-  u=ref_0;
+  u = ref_0;
   com1 = u;
   com2 = u;
   data_0 = 1000 * u;
@@ -167,15 +167,15 @@ void mode_ol() {
 
 }
 
- 
+
 /*
- * 
- * Mode Step
- * 
- */
+
+   Mode Step
+
+*/
 int nbr_ticks_step = 0;
 void mode_step() {
-  
+
   nbr_ticks_step ++;
   if (nbr_ticks_step <= 50) {
     u = 0;
@@ -189,25 +189,25 @@ void mode_step() {
     }
 
   }
-    com1 = u;
-    com2 = u;
-    // Save data 
-    data_0 = 1000 * u;
-    data_1 = 1000 * vel1;
-    data_2 = 1000 * vel2;
+  com1 = u;
+  com2 = u;
+  // Save data
+  data_0 = 1000 * u;
+  data_1 = 1000 * vel1;
+  data_2 = 1000 * vel2;
 
 }
 
 /*
- * 
- * Mode Closed Loop
- * 
- */
+
+   Mode Closed Loop
+
+*/
 
 void mode_cl() {
 
 
-  
+
   data_0 = 1000 * 0;
   data_1 = 1000 * 0;
   data_2 = 1000 * 0;
@@ -231,17 +231,19 @@ void periodicControlTask( void *pvParameters )
   for ( ;; )
   {
     digitalWrite(pinControlTask, HIGH);
-    delay(1);
-    // Read Inputs
-    pos1 = deltaPos*encoder1.getCount();
-    pos2 = deltaPos*encoder2.getCount();
+    //delay(1);
+    //Serial.println("ControlTask");
     
-    vel1 = deltaPos*100*encoder1.getDt();
-    vel2 = deltaPos*100*encoder2.getDt();
+    // Read Inputs
+    pos1 = deltaPos * encoder1.getCount();
+    pos2 = deltaPos * encoder2.getCount();
+
+    vel1 = deltaPos * 100 * encoder1.getDt();
+    vel2 = deltaPos * 100 * encoder2.getDt();
     formatVel();
 
-  
-    
+
+
     // Update Control
 
     switch (cmdMode) {
@@ -260,7 +262,7 @@ void periodicControlTask( void *pvParameters )
         break;
     }
 
-  
+
 
 
 
@@ -275,11 +277,11 @@ void periodicControlTask( void *pvParameters )
 
     frame_out.clear();
 
-    if(clientConnected) {
-    switch (cmdMode) {
-         case MODE_STEP :
-         case MODE_OL :
-         case MODE_CL :
+    if (clientConnected) {
+      switch (cmdMode) {
+        case MODE_STEP :
+        case MODE_OL :
+        case MODE_CL :
           frame_out.set_Cmd(CMD_SEND_DATA);
           frame_out.set_Data(data_0, 0);
           frame_out.set_Data(data_1, 1);
@@ -308,15 +310,16 @@ void periodicWifiTask( void *pvParameters )
   const char *pcTaskName = "Periodic Wifi Task";
   TickType_t xLastWakeTime;
   xLastWakeTime = xTaskGetTickCount();
-  client = wifiServer.available();
+  client = server.available();
   Serial.println("Client disconnected");
 
   int x;
   int countFrame;
-  
+
   for ( ;; )
   {
     digitalWrite(pinWifiTask, HIGH);
+    //Serial.println("Wifi Task");
     if (client.connected()) {
       if(!clientConnected)
         Serial.println("Client connected");
@@ -346,23 +349,23 @@ void periodicWifiTask( void *pvParameters )
         ref_0 = 0.001 * (float) frame_in.get_data(0);
         ref_1 = 0.001 * (float) frame_in.get_data(1);
         ref_2 = 0.001 * (float) frame_in.get_data(2);
-        Serial.println("ref " + String(ref_0) + " " + String(ref_1) + " " + String(ref_2)); 
-        
+        Serial.println("ref " + String(ref_0) + " " + String(ref_1) + " " + String(ref_2));
+
       }
       frame_in.clear();
-      
-    }
-    else {
+
+      }
+      else {
       client.stop();
       if(clientConnected)
         Serial.println("Client disconnected");
       clientConnected = false;
-      client = wifiServer.available();
-    }
+      client = server.available();
+      }
 
 
 
-
+    
 
     digitalWrite(pinWifiTask, LOW);
     vTaskDelayUntil( &xLastWakeTime, pdMS_TO_TICKS(tsWifi) ); // every 100 ms
@@ -371,9 +374,9 @@ void periodicWifiTask( void *pvParameters )
 
 
 void formatVel() {
-    Filter0_U.u1 = vel1;
-    Filter0_U.u2 = vel2;
-    Filter0_step();
-    vel1 = Filter0_Y.y1;
-    vel2 = Filter0_Y.y2;
+  Filter0_U.u1 = vel1;
+  Filter0_U.u2 = vel2;
+  Filter0_step();
+  vel1 = Filter0_Y.y1;
+  vel2 = Filter0_Y.y2;
 }

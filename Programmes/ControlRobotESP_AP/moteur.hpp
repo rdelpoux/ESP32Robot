@@ -14,7 +14,6 @@ class Moteur {
 private:
 
 	int pin_pwm;
-  int channel_pwm;
 	int pin_sens;
 	int friction;
 	bool sens;
@@ -26,11 +25,11 @@ private:
 
 public:
 	Moteur();
-	Moteur(int pin_pwm, int channel_pwm, int pin_sens, bool sens, int friction);
+	Moteur(int pin_pwm, int pin_sens, bool sens, int friction);
 	~Moteur();
 
 	/* Note : sens : determine si le sens de rotation pour avance / recule */
-	void config(int pin_pwm, int channel_pwm, int pin_sens, bool sens, int friction);
+	void config(int pin_pwm, int pin_sens, bool sens, int friction);
 
 	void run();
 	void stop();

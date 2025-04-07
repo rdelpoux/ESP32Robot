@@ -15,7 +15,6 @@
 Moteur::Moteur() {
 
   this->pin_pwm = 0;
-  this->channel_pwm = 0;
 	this->pin_sens = 0;
 	this->friction = 0;
 	this->vel = 0.0f;
@@ -23,9 +22,9 @@ Moteur::Moteur() {
 
 }
 
-Moteur::Moteur(int pin_pwm, int channel_pwm, int pin_sens, bool sens, int friction) {
+Moteur::Moteur(int pin_pwm, int pin_sens, bool sens, int friction) {
 
-	this->config(pin_pwm, channel_pwm, pin_sens, sens, friction);
+	this->config(pin_pwm, pin_sens, sens, friction);
 }
 
 
@@ -33,10 +32,9 @@ Moteur::~Moteur() {
 
 }
 
-void Moteur::config(int pin_pwm, int channel_pwm, int pin_sens, bool sens, int friction) {
+void Moteur::config(int pin_pwm, int pin_sens, bool sens, int friction) {
 
 	this->pin_pwm = pin_pwm;
-	this->channel_pwm = channel_pwm;
 	this->pin_sens = pin_sens;
 	this->friction = friction;
 	this->sens = sens;
@@ -44,8 +42,8 @@ void Moteur::config(int pin_pwm, int channel_pwm, int pin_sens, bool sens, int f
 
 	/* Set pins */
   pinMode(pin_pwm, OUTPUT);
-  ledcAttachPin(pin_pwm, channel_pwm);
-  ledcSetup(channel_pwm, 500, 8); // 500Hz PWM, 8-bit resolution
+  
+  ledcAttach(pin_pwm, 500, 8); // 500Hz PWM, 8-bit resolution
 	pinMode(pin_sens, OUTPUT);
 
 	//analogWrite(this->pin_pwm, 0);
@@ -69,7 +67,7 @@ void Moteur::run() {
 }
 
 void Moteur::stop() {
-	ledcWrite(this->channel_pwm, 0);
+	ledcWrite(this->pin_pwm, 0);
 	this->state = STATE_STOP;
 }
 
@@ -106,7 +104,7 @@ void Moteur::commande(float com) {
 	}
 
 	//Serial.print((byte) this->vel);
-	ledcWrite(this->channel_pwm,(byte) this->vel);
+	ledcWrite(this->pin_pwm,(byte) this->vel);
 }
 
 
