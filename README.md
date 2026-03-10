@@ -67,7 +67,25 @@ For system description goto : [System description page](/SystemDescription.md)
 
 ### Getting Started with the ESP32 Development Board
 
-There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language: [Getting Started](GettingStarted.md)
+There’s an add-on for the Arduino IDE allows you to program the ESP32 using the Arduino IDE and its programming language. To configure the ESP32 with the Arduino IDE, on the desktop, double on the shortcut :
+
+![](./img/configEPS.png)
+
+If the shortcut is missing, follow the : [Getting Started](GettingStarted.md)
+
+Then start the Arduino IDE v1.8.x 
+
+![](./img/ArduinoIDE.png)
+
+### Program Upload
+
+It was chosen to upload the program on the ESP32 using an [USB UART cable with FTDI chip](https://fr.rs-online.com/web/p/cables-raspberry-pi/7676200/). 
+
+When try to upload a new sketch to your ESP32 in the Arduino IDE, it may fail to connect to your board saying ‘**A fatal error occurred: Failed to connect to ESP32: Timed out waiting for packet header**’.
+
+<img src="https://raw.githubusercontent.com/rdelpoux/ESP32Robot/main/img/Failed-to-connect-to-ESP32-Error-while-Uploading-Sketch-in-Arduino-IDE.png" alt="Dual-brige " width="500" />
+
+Hold-down the **RESET** and **BOOT** button in your ESP32 board, then release  **RESET** then **BOOT** button. The ESP32 enters **BOOT** mode. After uploading a new sketch, press the **RESET** button to restart the ESP32 and run the new uploaded sketch.
 
 ### Arduino Tutorial
 
